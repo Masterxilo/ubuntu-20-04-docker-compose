@@ -16,7 +16,8 @@ RUN sudo apt-get install -y \
        $(lsb_release -cs) \
        stable" && \
     sudo apt-get update &&\
-    sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+    sudo apt-get install -y docker-ce docker-ce-cli containerd.io && \
+    docker --version
 
 RUN sudo curl \
     -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" \
